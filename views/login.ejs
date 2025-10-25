@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body{
+      background-image: url('/Todolist_Login.jpg');
+      background-size: cover;
+      
+      
+      /* display: flex; */
+      display: grid;
+      grid-template-columns: 340px 580px 440px; 
+      grid-template-rows: 170px 220px 220px;
+      
+      
+      
+    }
+    .container{
+      background-color: aliceblue;
+      opacity: 0.8;
+      width: 30vw;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      /* transform: translateX(1052px) translateY(139px); */
+      /* border: 2px solid black; */
+      border-radius: 23px;
+      grid-column: 3/4;
+      grid-row: 2/3;
+
+      
+    }
+    form{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+
+    }
+
+    input{
+      /* margin: 10px; */
+    }
+
+    .welcomeText{
+      color: white;
+      grid-row: 2/3;
+      grid-column: 2/3;
+      font-size: 24px;
+    }
+    p{
+      background-color: white;
+      color: black;
+      opacity: 0.8;
+      padding-left: 12px;
+      padding-bottom: 10px;
+    }
+    button{
+      margin-left: 62px;
+    }
+    
+   
+
+
+  </style>
+</head>
+<body>
+
+  <div class="welcomeText"><h1>Hi, Welcome to Pan's ToDoList Website</h1>
+ <p>In modern day we procastinate a lot, that's not solely our fault but we do procastinate when we don't use efficient software tools like todolist. So kill procastination and use Pan's ToDoList. </p></div>
+  
+
+  
+
+
+  <div class="container">
+    
+   <div class="heading"><h1>Login</h1></div>
+   <div class="form-action">
+  <form action="/login" method="POST">
+    <div> <input type="email" name="email" placeholder="Email" required /> </div> <br/>
+    <div><input type="password" name="password" placeholder="Password" required /></div><br/>
+    <div><button type="submit">Login</button></div>
+  </form>
+  </div>
+  <div class="paragraph-action">
+   <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+   </div>
+
+   </div>
+  
+</body>
+</html>
+
+
+

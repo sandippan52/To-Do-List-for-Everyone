@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Tasks</title>
+    <style>
+        body {
+           background-image: url('/Todolist_Login.jpg');
+           background-size: cover;
+
+        }
+        .container1 {
+            /* border: 2px solid black; */
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            background-color: white;
+            opacity: 0.7;
+        }
+        h1{
+            display: inline;
+            background-color: white;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Completed Tasks</h1>
+
+    <% if (completedData.length === 0) { %>
+        <p>No tasks completed yet.</p>
+    <% } else { %>
+        <% completedData.forEach(task => { %>
+            <div class="container1">
+                <h2><%= task.task %></h2>
+                <p>Completed on: <%= task.dueDate.toDateString() %></p>
+            </div>
+        <% }) %>
+    <% } %>
+
+    <a href="/home">⬅ Back to Home</a>
+</body>
+</html>
+
+
+
+
+

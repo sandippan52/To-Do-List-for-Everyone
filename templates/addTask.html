@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add The tasks</title>
+    <style>
+        *{margin: 0;
+          padding: 0;        
+        }
+        body{
+            background-image: url('/Todolist_Login.jpg');
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 400px 108px 350px 350px;
+            grid-template-rows: 150px 200px 200px;
+        }
+        .form-action{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            grid-row: 2/3;
+            grid-column: 3/4;
+            opacity: 0.7;
+            width: 30vw;
+            height: 60vh;
+           border-radius: 10px;
+           /* gap: 20px; */
+            
+        }
+
+        div{
+            margin: 20px;
+
+        }
+
+        input{
+            height: 20px;
+        }
+      label{
+        font-weight: bold;
+      }
+      h1{
+        display: flex;
+        justify-content: center;
+      }
+      .btn{
+         display: flex;
+        justify-content: center;
+      }
+       
+    </style>
+</head>
+<body>
+
+    <div class="form-action">
+       <span><h1>Add Your Tasks</h1><br><p>Adding Tasks is the first step of taking your life back in track.</p></span>
+    <form action="/addToDoData", method="post">
+<div><label for="task">Task Name</label> <br>
+<input type="text" id="task" name="task" placeholder="Add your task"></div>
+
+<div><label for="date">Date</label> <br>
+<input type="date" id="date" name="date"></div>
+
+<div><label for="time">Time</label> <br>
+<input type="time" id="time" name="time"></div>
+<div class="btn"><button type="submit">Add Task</button></div>
+    </form>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home for The app</title>
+    <style>
+        nav{
+           
+            /* position: fixed; */
+            top: 0px;
+            width: 100vw;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+        }
+        li{
+            margin: 10px;
+        }
+        .container1{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black; */
+            width: 971px;
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            opacity: 0.9;
+            
+        }
+        body{
+            background-image: url('/Todolist_Login.jpg');
+            background-size: cover;
+        }
+
+        .btn{
+          
+          display: flex;
+          justify-content: center;
+
+        }
+        h1{
+            display: inline;
+            background-color: white;
+            opacity: 0.7;
+        }
+
+        button{
+            height: 100px;
+          width: 200px;
+          font-size: medium;
+          color: black;
+          background-color: white;
+          opacity: 0.7;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+<ul style="list-style: none;">
+    <li><a href="">Home</a></li>
+    <li><a href="/addtask">Add Task</a></li>
+    <li><a href="/completedTasks">Completed Task</a></li>
+</ul>
+</nav>
+
+
+<div><h1>The tasks you are asigned are:-</h1></div>
+
+<div class="container">
+<% allData.forEach(data => { %>
+<div class="container1">
+    <div class="box"><h1><%= data.task %></h1></div>
+    <div class="box"><%= data.dueDate %></div>
+    <div><a href="/completed/<%= data._id %>">Click to mark Completed</a></div>
+</div>
+<% }) %>
+</div>
+
+<div class="btn"><Button id="btnn">Add New Task</Button></div>
+
+<script>
+    document.getElementById('btnn').addEventListener('click',function(){
+        window.location.href = "/addtask"
+    })
+</script>
+
+</body>
+</html>
+
+
+
